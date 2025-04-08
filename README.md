@@ -86,7 +86,7 @@ To run the training code, run:
 
 python train_quadruplets_mask_ldplus_adv_vec.py --cuda ---cudnn --parent_dir_wsd <path_to_wbpd> --train_bins_path_wsd <path_to_train_bin_info_for_wbpd> --val_bins_path_wsd <path_to_val_bin_info_for_wbpd> --parent_dir_csoispad <path_to_csoispad> --train_bins_path_csoispad <path_to_train_bin_info_for_csoispad> --val_bins_path_csoispad <path_to_val_bin_info_for_csoispad> --use_lpips_loss --use_msssim_loss --use_iso_loss --use_patch_adv_loss --no_ld_in --ema'
 
-References:
+# References:
 
 [1] J. Daugman, "How iris recognition works." In The Essential Guide to Image Processing, pp. 715-739. Academic Press, 2009.
 
