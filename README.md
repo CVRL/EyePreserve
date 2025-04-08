@@ -25,7 +25,7 @@ Synthesis of same-identity biometric iris images, both for existing and non-exis
 # Demo GUI:
 ## Summary:
 
-"LinearDeformer.py" contains code that linearly deforms the iris image to have a different pupil size. "EyePreserve.py" contains the deep autoencoder-based model, EyePreserve, that tries to mimic the complex movements of iris texture features directly from the data. The autoencoder model takes two inputs, (a) near-infrared iris image with initial pupil size, and (b) the binary mask defining the target shape of the iris. The model makes all the necessary nonlinear deformations to the iris texture to match the shape of the iris in an image with the shape provided by the target mask.
+"LinearDeformer.py" contains code that linearly deforms the iris image to have a different pupil size based on Daugman's normalization [1]. "BiomechDeformer.py" contains code that deforms based on the biomechanical model proposed by Tomeo-Reyes et al. [2]. "EyePreserve.py" contains the deep autoencoder-based model, EyePreserve, that tries to mimic the complex movements of iris texture features directly from the data. The autoencoder model takes two inputs, (a) near-infrared iris image with initial pupil size, and (b) the binary mask defining the target shape of the iris. The model makes all the necessary nonlinear deformations to the iris texture to match the shape of the iris in an image with the shape provided by the target mask.
 
 We have two GUI codes: "Synthesis_GUI.py" and "Comparison_GUI.py"
 
@@ -84,4 +84,11 @@ To the run the training codes you require the WBPD and CSOISPAD dataset divided 
 
 To run the training code, run:
 
-python train_quadruplets_mask_ldplus_adv_vec.py --cuda ---cudnn --parent_dir_wsd <path_to_wbpd> --train_bins_path_wsd <path_to_train_bin_info_for_wbpd> --val_bins_path_wsd <path_to_val_bin_info_for_wbpd> --parent_dir_csoispad <path_to_csoispad> --train_bins_path_csoispad <path_to_train_bin_info_for_csoispad> --val_bins_path_csoispad <path_to_val_bin_info_for_csoispad> --use_lpips_loss --use_msssim_loss --use_iso_loss --use_patch_adv_loss --no_ld_in --ema
+python train_quadruplets_mask_ldplus_adv_vec.py --cuda ---cudnn --parent_dir_wsd <path_to_wbpd> --train_bins_path_wsd <path_to_train_bin_info_for_wbpd> --val_bins_path_wsd <path_to_val_bin_info_for_wbpd> --parent_dir_csoispad <path_to_csoispad> --train_bins_path_csoispad <path_to_train_bin_info_for_csoispad> --val_bins_path_csoispad <path_to_val_bin_info_for_csoispad> --use_lpips_loss --use_msssim_loss --use_iso_loss --use_patch_adv_loss --no_ld_in --ema'
+
+References:
+
+[1] J. Daugman, "How iris recognition works." In The Essential Guide to Image Processing, pp. 715-739. Academic Press, 2009.
+
+[2] I. Tomeo-Reyes, A. Ross, A. D. Clark and V. Chandran, "A biomechanical approach to iris normalization," 2015 International Conference on Biometrics (ICB), Phuket, Thailand, 2015, pp. 9-16, doi: 10.1109/ICB.2015.7139041
+
