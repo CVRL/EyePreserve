@@ -43,37 +43,37 @@ Put the models directory in the same directory as LinearDeformer.py, EyePreserve
 You can create a conda environment to run the code as follows:
 
 1. Create the conda environment with the name of your choice 
+```
+conda create -n \<name\>
 
-> conda create -n \<name\>
-
-> conda activate \<name\>
-
+conda activate \<name\>
+```
 2. Run the appropriate pytorch installation instruction from www.pytorch.org based on your system. 
 
 For MAC:
-
-> conda install pytorch::pytorch torchvision torchaudio -c pytorch
-
+```
+conda install pytorch::pytorch torchvision torchaudio -c pytorch
+```
 For Linux or Windows (CPU only):
-
-> conda install pytorch torchvision torchaudio cpuonly -c pytorch
-
+```
+conda install pytorch torchvision torchaudio cpuonly -c pytorch
+```
 3. Install the required packages in conda environment.
 
-> conda install -c conda-forge opencv
-
-> conda install -c anaconda scikit-learn
-
-> pip install -U Pillow kornia[x] ninja click
+```
+conda install -c conda-forge opencv
+conda install -c anaconda scikit-learn
+pip install -U Pillow kornia[x] ninja click
+```
 
 And the GUI using:
-
-> python Synthesis_GUI.py
-
+```
+python Synthesis_GUI.py
+```
 If you have CUDA support (you need to have a CUDA-supported GPU and have the appropriate version of pytorch installed), you can run the GUIs with CUDA enabled:
-
-> python Synthesis_GUI.py cuda
-
+```
+python Synthesis_GUI.py cuda
+```
 The video illustrating what the GUI does is provided in the "sample_videos" folder as well. 
 
 **** The files in "dnnlib" and "torch_utils" are from the StyleGAN3 pytorch github repo to load and use the StyleGAN3 generator.
@@ -84,11 +84,23 @@ To the run the training codes you require the WBPD and CSOISPAD dataset divided 
 
 To run the training code, run:
 
+```
 python train_quadruplets_mask_ldplus_adv_vec.py --cuda ---cudnn --parent_dir_wsd <path_to_wbpd> --train_bins_path_wsd <path_to_train_bin_info_for_wbpd> --val_bins_path_wsd <path_to_val_bin_info_for_wbpd> --parent_dir_csoispad <path_to_csoispad> --train_bins_path_csoispad <path_to_train_bin_info_for_csoispad> --val_bins_path_csoispad <path_to_val_bin_info_for_csoispad> --use_lpips_loss --use_msssim_loss --use_iso_loss --use_patch_adv_loss --no_ld_in --ema'
+```
 
 # References:
 
 [1] J. Daugman, "How iris recognition works." In The Essential Guide to Image Processing, pp. 715-739. Academic Press, 2009.
 
 [2] I. Tomeo-Reyes, A. Ross, A. D. Clark and V. Chandran, "A biomechanical approach to iris normalization," 2015 International Conference on Biometrics (ICB), Phuket, Thailand, 2015, pp. 9-16, doi: 10.1109/ICB.2015.7139041
+
+# Our paper:
+```
+@article{khan2023eyepreserve,
+  title={Eyepreserve: Identity-preserving iris synthesis},
+  author={Khan, Siamul Karim and Tinsley, Patrick and Mitcheff, Mahsa and Flynn, Patrick and Bowyer, Kevin W and Czajka, Adam},
+  journal={arXiv preprint arXiv:2312.12028},
+  year={2023}
+}
+```
 
