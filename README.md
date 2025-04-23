@@ -45,7 +45,6 @@ You can create a conda environment to run the code as follows:
 1. Create the conda environment with the name of your choice 
 ```
 conda create -n \<name\>
-
 conda activate \<name\>
 ```
 2. Run the appropriate pytorch installation instruction from www.pytorch.org based on your system. 
@@ -103,4 +102,5 @@ python train_quadruplets_mask_ldplus_adv_vec.py --cuda ---cudnn --parent_dir_wsd
   year={2023}
 }
 ```
+Please cite our paper if you utilize any part of this repository in your work.
 
