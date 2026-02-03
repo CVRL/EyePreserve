@@ -49,13 +49,13 @@ conda activate \<name\>
 ```
 2. Run the appropriate pytorch installation instruction from www.pytorch.org based on your system. 
 
-For MAC:
+For MAC or Windows (CPU only):
 ```
-conda install pytorch::pytorch torchvision torchaudio -c pytorch
+pip3 install torch torchvision
 ```
-For Linux or Windows (CPU only):
+For Linux (CPU only):
 ```
-conda install pytorch torchvision torchaudio cpuonly -c pytorch
+pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 ```
 3. Install the required packages in conda environment.
 
