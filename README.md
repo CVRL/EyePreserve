@@ -6,7 +6,7 @@ Synthesis of same-identity biometric iris images, both for existing and non-exis
 
 ### Here's a demo gif comparing the different iris deformation methods:
 
-![comparison](/assets/comparison.gif)
+![comparison](/assets/comparison_brighter.gif)
 
 ### Here are samples of diseased iris images "rectified" by EyePreserve to look like healthy irises and outputs for the opposite, where a healthy iris was deformed to mimic irregular pupil shapes seen in diseased irises:
 
