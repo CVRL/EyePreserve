@@ -4,7 +4,7 @@ Synthesis of same-identity biometric iris images, both for existing and non-exis
 
 ![image](/assets/teaser.png)
 
-### Here's a demo gif comparing the different iris deformation methods (click on the gif to view it larger):
+### Here's a demo gif comparing the different iris deformation methods:
 
 ![comparison](/assets/comparison_brighter_2row2col.gif)
 
