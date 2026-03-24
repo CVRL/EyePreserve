@@ -1,0 +1,1 @@
+Upon publication of the EyePreserve paper, the newly collected iris data for this paper will be published, and the specific link will be added here. It will be available as a part of: https://cvrl.nd.edu/projects/data/

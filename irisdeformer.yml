@@ -1,0 +1,13 @@
+name: irisdeformer
+channels:
+  - defaults
+dependencies:
+  - pip
+  - pip:
+      - Pillow==10.2.0
+      - kornia==0.7.1
+      - kornia[x]==0.7.1
+      - opencv-python==4.8.1.78
+      - torch==2.1.2
+      - torchaudio==2.1.1
+      - torchvision==0.16.1
