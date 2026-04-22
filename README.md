@@ -33,8 +33,6 @@ An example where the iris is deformed into arbitrary pupil shapes:
 
 "LinearDeformer.py" contains code that linearly deforms the iris image to have a different pupil size based on Daugman's normalization [1]. "BiomechDeformer.py" contains code that deforms based on the biomechanical model proposed by Tomeo-Reyes et al. [2]. "EyePreserve.py" contains the deep autoencoder-based model, EyePreserve, that tries to mimic the complex movements of iris texture features directly from the data. The autoencoder model takes two inputs, (a) near-infrared iris image with initial pupil size, and (b) the binary mask defining the target shape of the iris. The model makes all the necessary nonlinear deformations to the iris texture to match the shape of the iris in an image with the shape provided by the target mask.
 
-We have two GUI codes: "Synthesis_GUI.py" and "Comparison_GUI.py"
-
 ### GUI in action
 
 "Synthesis_GUI.py" uses StyleGAN3 to generate a random iris image which can then be modified using the Linear deformation model and EyePreserve as illustrated below:
