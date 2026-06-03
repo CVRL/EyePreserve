@@ -53,14 +53,19 @@ conda activate \<name\>
 ```
 2. Run the appropriate pytorch installation instruction from www.pytorch.org based on your system. 
 
-For MAC or Windows (CPU only):
+# For MAC or Windows (CPU only):
 ```
 pip3 install torch torchvision
 ```
-For Linux (CPU only):
+# For Linux (CPU only):
 ```
 pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 ```
+# GPU (might differ based on CUDA version supported by your GPU):
+```
+pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+```
+
 3. Install the required packages in conda environment.
 
 ```
