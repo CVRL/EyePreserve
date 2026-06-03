@@ -1,8 +1,7 @@
 # EyePreserve: Identity-Preserving Iris Synthesis
 
 ## Abstract
-Synthesis of same-identity biometric iris images, both for existing and non-existing identities while preserving the identity across a wide range of pupil sizes, is complex due to the
-intricate iris muscle constriction mechanism, requiring a precise model of iris non-linear texture deformations to be embedded into the synthesis pipeline. This paper presents the first method of fully data-driven, identity-preserving, pupil size-varying synthesis of iris images. This approach is capable of synthesizing images of irises with different pupil sizes representing non-existing identities, as well as non-linearly deforming the texture of iris images of existing subjects given the segmentation mask of the target iris image. Iris recognition experiments suggest that the proposed deformation model both preserves the identity when changing the pupil size, and offers better similarity between same-identity iris samples with significant differences in pupil size, compared to state-of-the-art linear and non-linear (biomechanical-based) iris deformation models. Two immediate applications of the proposed approach are: (a) synthesis of new, or enhancement of the existing datasets of same-identity iris images with varying pupil sizes, with correct modeling of complex iris texture deformations, and (b) helping forensic human experts examine iris image pairs with significant differences in pupil dilation by deforming one or both images to align the pupil size. Images considered in this work conform to selected ISO/IEC 29794-6 quality metrics to make them applicable in biometric systems. The source codes and model weights are offered with this paper.
+Synthesis of same-identity biometric iris images, both for existing and non-existing identities, while preserving the identity across a wide range of pupil sizes, is complex due to the intricate iris muscle constriction mechanism, requiring a precise model of iris non-linear texture deformations to be embedded into the synthesis pipeline. This paper presents EyePreserve, a novel, fully data-driven non-linear texture deformation model, embedded within an identity-preserving, pupil size-varying synthesis framework. This approach is capable of synthesizing images of irises with different pupil sizes representing non-existing identities, as well as non-linearly deforming the texture of iris images of existing subjects, given the segmentation mask of the target iris image. Iris recognition experiments suggest that the proposed deformation model both preserves the identity when changing the pupil size, and offers better similarity between same-identity iris samples with significant differences in pupil size, compared to state-of-the-art linear and non-linear (biomechanical-based) iris deformation models. Two immediate applications of the proposed approach are: (a) synthesis of new, or enhancement of the existing datasets of same-identity iris images with varying pupil sizes, with correct modeling of complex iris texture deformations, and (b) helping forensic human experts examine iris image pairs with significant differences in pupil dilation by deforming one or both images to align the pupil size. Images considered in this work conform to selected ISO/IEC 29794-6 quality metrics to make them applicable in biometric systems. 
 
 ![image](/assets/teaser.png)
 
@@ -40,7 +39,7 @@ An example where the iris is deformed into arbitrary pupil shapes:
 
 ### How to run
 
-Download the models zip and extract it from here: [models.zip](https://notredame.box.com/s/us71ubwjzebxi2r015whrmdkb3rrtjn2)
+Download the models zip and extract it from here: [models.zip](https://drive.google.com/file/d/1xqWJtXiZWgGwYaNDvIxVS-4dLEGKY4es/view?usp=sharing)
 
 Put the models directory in the same directory as LinearDeformer.py, EyePreserve.py and GUI.py
 
@@ -104,6 +103,8 @@ Upon publication of the EyePreserve paper, the newly collected iris data for thi
 
 [2] I. Tomeo-Reyes, A. Ross, A. D. Clark and V. Chandran, "A biomechanical approach to iris normalization," 2015 International Conference on Biometrics (ICB), Phuket, Thailand, 2015, pp. 9-16, doi: 10.1109/ICB.2015.7139041
 
+If you are using the Linear and Biomechanical implementations provided in this repository make sure to cite the appropriate paper from above.
+
 ## Citation:
 
 ```
@@ -114,4 +115,3 @@ Upon publication of the EyePreserve paper, the newly collected iris data for thi
   year={2023}
 }
 ```
-

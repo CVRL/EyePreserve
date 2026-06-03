@@ -486,7 +486,7 @@ class SIFLayerMaskOSIRIS(nn.Module):
 class EyePreserve(object):
     def __init__(self, net_path="./models/0007-val_loss-22.957276336365826+-0.0-val_bit_match-81.10588183031244+-0.0-val_linear_bit_match-75.13033321984577+-0.0.pth", sif_filter_path1="./models/ICAtextureFilters_15x15_7bit.pt", sif_filter_path2="./models/ICAtextureFilters_17x17_5bit.pt", osiris_filters_path="./models/osiris_filters.txt", device=torch.device('cpu')):
         self.device = device
-        self.nets = torch.load(net_path, map_location=self.device)
+        self.nets = torch.load(net_path, map_location=self.device, weights_only=False)
         self.net = self.nets[0].to(device)
         self.net.eval()
         del self.nets[1]
@@ -547,6 +547,7 @@ class EyePreserve(object):
         norm_grid = torch.stack([gridx, gridy], dim=-1).to(self.device)
         return norm_grid
     
+    @torch.inference_mode()
     def linear_deform(self, image, input_pxyr, input_ixyr, alpha, mode='bicubic'):
         xc = ((input_pxyr[:, 0] + input_ixyr[:, 0])/2).float().reshape(-1,1).to(self.device)
         yc = ((input_pxyr[:, 1] + input_ixyr[:, 1])/2).float().reshape(-1,1).to(self.device)
