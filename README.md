@@ -66,12 +66,10 @@ pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126
 ```
 
-3. Install the required packages in conda environment.
+3. Install the required packages in the conda environment.
 
 ```
-conda install -c conda-forge opencv
-conda install -c anaconda scikit-learn
-pip install -U Pillow kornia[x] ninja click
+pip install -U opencv-python scikit-learn diffusers transformers xformers accelerate kornia[x] ninja click Pillow
 ```
 
 And the GUI using:
